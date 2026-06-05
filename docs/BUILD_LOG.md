@@ -23,13 +23,13 @@ environment context that isn't obvious from the source alone.
 - **Package manager:** **pnpm** (installed standalone via winget). `corepack enable`
   failed with `EPERM` because it can't write to `C:\Program Files\nodejs` without admin
   rights, so the standalone install was used instead.
-- **Project location:** `C:\Users\t_fis\dev\agentops` — deliberately **outside OneDrive**.
+- **Project location:** `%USERPROFILE%\dev\agentops` — deliberately **outside OneDrive**.
 
 ### Why the project lives outside OneDrive
 
-It was originally scaffolded under `C:\Users\t_fis\OneDrive\Documents\Cursor Trevor\agentops`,
-but OneDrive's sync kept **locking files in `.next/`**, causing `EPERM` errors during
-rebuilds. The fix was to relocate the whole project to `C:\Users\t_fis\dev\agentops`.
+It was originally scaffolded inside a OneDrive-synced `Documents` folder, but OneDrive's
+sync kept **locking files in `.next/`**, causing `EPERM` errors during rebuilds. The fix
+was to relocate the whole project outside OneDrive (to `%USERPROFILE%\dev\agentops`).
 
 > **Consequence:** projects under `dev\` are **not** backed up by OneDrive. **GitHub is
 > the backup now** — commit and push regularly.
@@ -91,5 +91,5 @@ rebuilds. The fix was to relocate the whole project to `C:\Users\t_fis\dev\agent
 
 A new window opened on this folder starts a **fresh chat** with no memory of prior
 sessions — that's expected. Everything needed is in the repo: the code, this log, the
-build spec at `docs/AGENTOPS_V1_BUILD_KIT.md`, and the security docs. To continue, just
-point a new chat at this folder and reference this file.
+PRD at `docs/agentops-prd.md`, and the security docs. To continue, just point a new chat
+at this folder and reference this file.
