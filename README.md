@@ -2,7 +2,7 @@
 
 **An enterprise AI agent governance control tower.**
 
-**▶ Live demo: [agentops-kappa.vercel.app](https://agentops-kappa.vercel.app/)**
+**▶ Live demo: [agentops-kappa.vercel.app](https://agentops-kappa.vercel.app/)** · **Highlights & decisions: [docs/highlights.md](./docs/highlights.md)**
 
 Companies are deploying AI agents everywhere — ticket triage, release notes, support summaries, policy Q&A — and leadership has no single place to answer: _which agents exist, who owns them, what data they touch, are they any good, and should they ship?_ AgentOps inventories every agent, scores its risk, surfaces its evaluation metrics, and gives each one a **launch-readiness recommendation**: Launch, Conditional, Needs Review, or Do Not Launch.
 
