@@ -103,8 +103,10 @@ agentops/
 │   ├── readiness.ts             # Deterministic readiness engine
 │   └── readiness.test.ts        # Tests for the engine + safety gates
 └── docs/
-    ├── AGENTOPS_V1_BUILD_KIT.md # The build spec
-    └── threat-model.md          # STRIDE analysis
+    ├── agentops-prd.md          # Product requirements
+    ├── highlights.md            # Project highlights
+    ├── threat-model.md          # STRIDE analysis
+    └── BUILD_LOG.md             # Build narrative & key decisions
 ```
 
 ---
