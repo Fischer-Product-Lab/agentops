@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ShieldCheck } from "lucide-react";
+import { Code2, Info, ShieldCheck } from "lucide-react";
 import { navItems } from "./nav-items";
+
+const REPO_URL = "https://github.com/Fischer-Product-Lab/agentops";
 
 function isActive(pathname: string, href: string, exact?: boolean) {
   if (exact) return pathname === href;
@@ -69,12 +71,38 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
         })}
       </nav>
 
-      {/* Footer note */}
-      <div className="mt-auto rounded-lg border border-hairline bg-surface/60 p-3 text-xs leading-relaxed text-ink-muted">
-        <p className="font-medium text-ink">Read-only demo</p>
-        <p className="mt-1 text-ink-faint">
-          Synthetic data only. No real customer, employer, or personal data.
-        </p>
+      {/* Footer */}
+      <div className="mt-auto space-y-3">
+        <div className="rounded-lg border border-hairline bg-surface/60 p-3 text-xs leading-relaxed text-ink-muted">
+          <p className="font-medium text-ink">Read-only demo</p>
+          <p className="mt-1 text-ink-faint">
+            Synthetic data only. No real customer, employer, or personal data.
+          </p>
+        </div>
+        <div className="flex flex-col gap-0.5 px-1 text-xs">
+          <Link
+            href="/about"
+            onClick={onNavigate}
+            aria-current={pathname === "/about" ? "page" : undefined}
+            className={`flex items-center gap-2 rounded-md px-1.5 py-1.5 transition-colors ${
+              pathname === "/about"
+                ? "text-gold"
+                : "text-ink-faint hover:text-ink"
+            }`}
+          >
+            <Info className="h-3.5 w-3.5" />
+            About this demo
+          </Link>
+          <a
+            href={REPO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-md px-1.5 py-1.5 text-ink-faint transition-colors hover:text-ink"
+          >
+            <Code2 className="h-3.5 w-3.5" />
+            View source
+          </a>
+        </div>
       </div>
     </div>
   );

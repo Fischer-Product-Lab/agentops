@@ -1,6 +1,7 @@
 "use client";
 
-import { FlaskConical, Menu } from "lucide-react";
+import Link from "next/link";
+import { FlaskConical, Info, Menu } from "lucide-react";
 
 export function Topbar({ onMenuClick }: { onMenuClick: () => void }) {
   return (
@@ -21,14 +22,17 @@ export function Topbar({ onMenuClick }: { onMenuClick: () => void }) {
       </span>
 
       <div className="ml-auto flex items-center gap-3">
-        {/* Synthetic data badge — always visible, per the V1 guardrails */}
-        <span
-          className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 bg-gold/10 px-3 py-1.5 text-xs font-medium text-gold-soft"
-          title="This demo displays only synthetic, made-up data."
+        {/* Synthetic data badge — always visible, per the V1 guardrails.
+            Doubles as the entry point to the "About this demo" context. */}
+        <Link
+          href="/about"
+          title="Read-only demo on synthetic data — about this demo"
+          className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 bg-gold/10 px-3 py-1.5 text-xs font-medium text-gold-soft transition-colors hover:border-gold/70 hover:bg-gold/20"
         >
           <FlaskConical className="h-3.5 w-3.5" />
           Synthetic demo data
-        </span>
+          <Info className="h-3.5 w-3.5 opacity-60" />
+        </Link>
       </div>
     </header>
   );
