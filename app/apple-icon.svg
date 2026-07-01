@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="AgentOps">
-  <rect width="180" height="180" rx="40" fill="#0f1521"/>
-  <rect x="36" y="36" width="44" height="44" rx="8" fill="#c9a45c"/>
-  <rect x="100" y="36" width="44" height="44" rx="8" fill="#c9a45c" opacity="0.72"/>
-  <rect x="36" y="100" width="44" height="44" rx="8" fill="#c9a45c" opacity="0.72"/>
-  <rect x="100" y="100" width="44" height="44" rx="8" fill="#c9a45c"/>
-</svg>
