@@ -3,7 +3,7 @@
 A concise tour of what AgentOps is, the decisions behind it, and what it demonstrates.
 Part of **Fischer Product Lab** — secure AI systems for trust, risk, and enterprise execution.
 
-**Live demo:** https://agentops-kappa.vercel.app/
+**Live demo:** https://agentops-fpl.vercel.app/
 
 ---
 

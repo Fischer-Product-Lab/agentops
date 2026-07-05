@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
+  Activity,
   ArrowUpRight,
   Code2,
   FileText,
+  Handshake,
   Layers,
+  Radar,
   Scale,
   ShieldCheck,
   Sparkles,
@@ -168,6 +171,39 @@ export default function AboutPage() {
             </li>
           ))}
         </ul>
+      </section>
+
+      {/* Suite */}
+      <section className="rounded-xl border border-hairline bg-surface p-6">
+        <h2 className="font-display text-lg font-semibold text-ink">
+          Part of the Fischer Product Lab suite
+        </h2>
+        <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+          AgentOps governs AI initiatives <span className="text-ink">before</span>{" "}
+          they ship. Its sibling products cover the rest of the lifecycle —
+          each a read-only, synthetic-data demo with a deterministic engine at
+          its core.
+        </p>
+        <div className="mt-4 space-y-3">
+          <ExternalLink
+            href="https://productpulse-fpl.vercel.app"
+            icon={Activity}
+            label="ProductPulse"
+            hint="Executive product analytics — did shipped initiatives actually move the metrics? Governance before, accountability after."
+          />
+          <ExternalLink
+            href="https://trustdesk-fpl.vercel.app"
+            icon={Handshake}
+            label="TrustDesk"
+            hint="Customer security questionnaire automation with a deterministic confidence and routing engine."
+          />
+          <ExternalLink
+            href="https://vuln-board.vercel.app"
+            icon={Radar}
+            label="VulnBoard"
+            hint="Executive vulnerability metrics — SLA pressure, remediation trends, and owner accountability."
+          />
+        </div>
       </section>
 
       {/* Stack + links */}

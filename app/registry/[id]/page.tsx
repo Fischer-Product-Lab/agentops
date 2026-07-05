@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import {
   AlertTriangle,
   ArrowLeft,
+  ArrowUpRight,
   CheckCircle2,
   ShieldAlert,
 } from "lucide-react";
@@ -13,6 +14,16 @@ import { StatusBadge } from "@/components/status-badge";
 import { ScoreRing } from "@/components/agent/score-ring";
 import { RubricBreakdown } from "@/components/agent/rubric-breakdown";
 import { EvalPanel } from "@/components/agent/eval-panel";
+
+/**
+ * Agents with a post-launch counterpart in ProductPulse's Initiative Registry
+ * (the suite's product-analytics demo). Only these three link out — the other
+ * agents have no counterpart initiative, and a dead-end link weakens the demo.
+ * ProductPulse deep-links back to /registry/{id} for these same ids.
+ */
+const PRODUCTPULSE_LINKED_AGENTS = new Set(["agt-001", "agt-002", "agt-003"]);
+const PRODUCTPULSE_INITIATIVES_URL =
+  "https://productpulse-fpl.vercel.app/initiatives";
 
 export function generateStaticParams() {
   return agents.map((agent) => ({ id: agent.id }));
@@ -87,6 +98,17 @@ export default async function AgentDetailPage({
             {agent.name}
           </h1>
           <StatusBadge status={readiness.status} />
+          {PRODUCTPULSE_LINKED_AGENTS.has(agent.id) && (
+            <a
+              href={PRODUCTPULSE_INITIATIVES_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 bg-gold/10 px-2.5 py-1 text-xs font-medium whitespace-nowrap text-gold-soft transition-colors hover:border-gold/70 hover:text-gold"
+            >
+              Post-launch performance · ProductPulse
+              <ArrowUpRight className="h-3.5 w-3.5" />
+            </a>
+          )}
         </div>
         <p className="mt-1 text-sm text-ink-faint">{agent.id}</p>
         <p className="mt-3 max-w-2xl text-ink-muted">{agent.useCase}</p>

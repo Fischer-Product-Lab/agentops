@@ -2,7 +2,7 @@
 
 **An enterprise AI agent governance control tower.**
 
-**▶ Live demo: [agentops-kappa.vercel.app](https://agentops-kappa.vercel.app/)** · **Highlights & decisions: [docs/highlights.md](./docs/highlights.md)**
+**▶ Live demo: [agentops-fpl.vercel.app](https://agentops-fpl.vercel.app/)** · **Highlights & decisions: [docs/highlights.md](./docs/highlights.md)**
 
 Companies are deploying AI agents everywhere — ticket triage, release notes, support summaries, policy Q&A — and leadership has no single place to answer: _which agents exist, who owns them, what data they touch, are they any good, and should they ship?_ AgentOps inventories every agent, scores its risk, surfaces its evaluation metrics, and gives each one a **launch-readiness recommendation**: Launch, Conditional, Needs Review, or Do Not Launch.
 
@@ -25,13 +25,14 @@ See [`SECURITY.md`](./SECURITY.md) for the full posture and [`docs/threat-model.
 
 ## What's inside
 
-Three screens:
+Four screens:
 
 | Route | Screen | Purpose |
 | --- | --- | --- |
 | `/` | **Executive Dashboard** | Portfolio at a glance: totals, counts by readiness, hours saved, a "needs attention" list, and two charts. |
 | `/registry` | **Agent Registry** | A sortable, risk-aware table of every agent. |
-| `/registry/[id]` | **Agent Detail** | One agent in full: purpose, data/tools, evaluation metrics, the readiness scorecard with its 7-criteria breakdown and reasons, failure modes, and an audit log. |
+| `/registry/[id]` | **Agent Detail** | One agent in full: purpose, data/tools, evaluation metrics, the readiness scorecard with its 7-criteria breakdown and reasons, failure modes, and an audit log. Agents with a shipped counterpart link out to its post-launch performance in [ProductPulse](https://productpulse-fpl.vercel.app/initiatives). |
+| `/about` | **About this demo** | Why AgentOps exists, how the readiness engine works, the security posture, and the rest of the Fischer Product Lab suite. |
 
 ### The readiness engine (the centerpiece)
 
@@ -88,6 +89,7 @@ agentops/
 │   ├── registry/
 │   │   ├── page.tsx             # Agent registry (/registry)
 │   │   └── [id]/page.tsx        # Agent detail (/registry/[id])
+│   ├── about/page.tsx           # About this demo (/about)
 │   ├── layout.tsx               # Root layout + app shell
 │   └── globals.css              # Design system (Tailwind v4 theme)
 ├── components/

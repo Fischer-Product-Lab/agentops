@@ -8,7 +8,8 @@ environment context that isn't obvious from the source alone.
 
 ## Status
 
-- **Live demo:** https://agentops-kappa.vercel.app/
+- **Live demo:** https://agentops-fpl.vercel.app/ (alias; the original
+  auto-generated `agentops-kappa.vercel.app` domain still resolves)
 - **Repo:** `Fischer-Product-Lab/agentops` (GitHub)
 - **Production branch:** `main` (Vercel auto-deploys on every push to `main`)
 - **V1 scope:** complete and deployed.
@@ -77,6 +78,26 @@ was to relocate the whole project outside OneDrive (to `%USERPROFILE%\dev\agento
 | E | `/` executive dashboard (KPIs, status donut, hours-by-team chart, attention list). |
 | F | README, `SECURITY.md`, STRIDE `docs/threat-model.md`, Dependabot, strict TS. |
 | G | Deploy to Vercel from GitHub (no env vars; production branch `main`). |
+
+## Suite linkage (July 2026)
+
+AgentOps now cross-links with **ProductPulse** (productpulse-fpl.vercel.app), the
+suite's post-launch product-analytics demo. The pairing pitch: AgentOps asks *"is
+this safe to launch?"* before shipping; ProductPulse asks *"did it actually work?"*
+after.
+
+- Agent detail pages for `agt-001`, `agt-002`, and `agt-003` show a gold
+  "Post-launch performance · ProductPulse" chip linking to ProductPulse's
+  Initiative Registry. Only these three — the other five agents have no
+  counterpart initiative, and a dead-end link weakens the demo.
+- ProductPulse deep-links back to `/registry/agt-001|002|003`. **Those ids and
+  the `/registry/{id}` route pattern must not change without coordinating** —
+  ProductPulse pins them in its data and tests.
+- Statuses are never copied across products (link, don't restate): AgentOps
+  readiness is a pre-launch judgment; ProductPulse impact is a post-launch
+  measurement. Different axes by design.
+- The About page now lists all three siblings: ProductPulse, TrustDesk, and
+  VulnBoard.
 
 ## GitHub hardening
 

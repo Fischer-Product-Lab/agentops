@@ -2,7 +2,7 @@
 
 **Product:** AgentOps — enterprise AI agent governance control tower
 **Author:** Trevor Fischer · Fischer Product Lab
-**Status:** V1 shipped (read-only, synthetic demo) · [Live](https://agentops-kappa.vercel.app/)
+**Status:** V1 shipped (read-only, synthetic demo) · [Live](https://agentops-fpl.vercel.app/)
 **Last updated:** 2026-06
 
 ---
