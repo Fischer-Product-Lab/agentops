@@ -21,7 +21,12 @@ export function StatusDonut({
   total: number;
 }) {
   const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    // Defer to a frame callback so the state update isn't synchronous within
+    // the effect (react-hooks/set-state-in-effect).
+    const frame = requestAnimationFrame(() => setMounted(true));
+    return () => cancelAnimationFrame(frame);
+  }, []);
 
   // Avoid rendering Recharts during static generation (no layout to measure).
   if (!mounted) return <div className="h-56" aria-hidden />;

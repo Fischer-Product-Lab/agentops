@@ -99,8 +99,8 @@ export default function DashboardPage() {
           Executive Dashboard
         </h1>
         <p className="mt-2 text-ink-muted">
-          Portfolio-wide view of every AI agent, its readiness, and where
-          attention is needed.
+          A company-wide view of the agent portfolio — every AI agent, its
+          readiness, hours saved, and where attention is needed.
         </p>
       </header>
 
