@@ -53,9 +53,7 @@ export function LandingPage() {
               Portfolio demonstration · read-only · synthetic data
             </p>
             <h1 className="marketing-type-display marketing-rise marketing-rise-delay-1 mt-6 max-w-5xl text-ivory">
-              Is this initiative
-              <br />
-              safe to launch.
+              Is this Agent safe to launch?
             </h1>
             <p className="marketing-type-body marketing-rise marketing-rise-delay-2 mx-auto mt-6 max-w-xl text-ivory/70">
               Oversee every agent&apos;s readiness, governance signals,
