@@ -25,11 +25,12 @@ See [`SECURITY.md`](./SECURITY.md) for the full posture and [`docs/threat-model.
 
 ## What's inside
 
-Four screens:
+Five screens:
 
 | Route | Screen | Purpose |
 | --- | --- | --- |
-| `/` | **Executive Dashboard** | Portfolio at a glance: totals, counts by readiness, hours saved, a "needs attention" list, and two charts. |
+| `/` | **Landing** | Cinematic portfolio surface — the AgentOps question, a real control-tower window over the synthetic fleet, and how the readiness engine decides. |
+| `/demo` | **Executive Dashboard** | Portfolio at a glance: totals, counts by readiness, hours saved, a "needs attention" list, and two charts. |
 | `/registry` | **Agent Registry** | A sortable, risk-aware table of every agent. |
 | `/registry/[id]` | **Agent Detail** | One agent in full: purpose, data/tools, evaluation metrics, the readiness scorecard with its 7-criteria breakdown and reasons, failure modes, and an audit log. Agents with a shipped counterpart link out to its post-launch performance in [ProductPulse](https://productpulse-fpl.vercel.app/initiatives). |
 | `/about` | **About this demo** | Why AgentOps exists, how the readiness engine works, the security posture, and the rest of the Fischer Product Lab suite. |
@@ -85,14 +86,17 @@ pnpm test
 ```
 agentops/
 ├── app/
-│   ├── page.tsx                 # Executive dashboard (/)
-│   ├── registry/
-│   │   ├── page.tsx             # Agent registry (/registry)
-│   │   └── [id]/page.tsx        # Agent detail (/registry/[id])
-│   ├── about/page.tsx           # About this demo (/about)
-│   ├── layout.tsx               # Root layout + app shell
+│   ├── (marketing)/page.tsx     # Cinematic landing (/)
+│   ├── (demo)/
+│   │   ├── layout.tsx           # App shell (product chrome)
+│   │   ├── demo/page.tsx        # Executive dashboard (/demo)
+│   │   ├── registry/            # Agent registry + detail
+│   │   └── about/page.tsx       # About this demo (/about)
+│   ├── layout.tsx               # Root fonts + metadata
 │   └── globals.css              # Design system (Tailwind v4 theme)
+├── DESIGN.md                    # Landing visual language + kill list
 ├── components/
+│   ├── marketing/               # Landing + real product window
 │   ├── layout/                  # Sidebar, top bar, app shell
 │   ├── dashboard/               # Status donut, hours-by-team chart
 │   ├── agent/                   # Score ring, rubric breakdown, eval panel

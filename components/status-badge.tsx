@@ -10,7 +10,7 @@ const STATUS_STYLES: Record<ReadinessStatus, string> = {
 /** Raw hex per status — handy for chart fills (Recharts) later. */
 export const STATUS_HEX: Record<ReadinessStatus, string> = {
   Launch: "#5fd6a0",
-  Conditional: "#c9a45c",
+  Conditional: "#c4a35a",
   "Needs Review": "#e6a560",
   "Do Not Launch": "#e8736f",
 };

@@ -64,8 +64,9 @@ unmanaged risk, and no defensible, repeatable way to decide what ships.
    team, data access, autonomy, readiness, value). Risk-elevated cells are visually flagged.
 2. **Agent Detail (`/registry/[id]`)** — purpose, data/tools, evaluation metrics, the
    readiness scorecard (score ring + 7-criteria breakdown + reasons), failure modes, audit log.
-3. **Executive Dashboard (`/`)** — totals, hours saved, readiness mix (donut), hours saved
-   by team (bar), and a prioritized "needs attention" list.
+3. **Executive Dashboard (`/demo`)** — totals, hours saved, readiness mix (donut), hours saved
+   by team (bar), and a prioritized "needs attention" list. The cinematic landing at `/`
+   frames the same question and sits a real control-tower window on the synthetic fleet.
 4. **Readiness engine (`lib/readiness.ts`)** — pure function: weighted score → band →
    hard safety gates → human-readable reasons. Verdicts are **computed, never stored**.
 

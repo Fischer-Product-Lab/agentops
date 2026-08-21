@@ -25,8 +25,10 @@ measurable, executive-ready view.
 
 ## What it does
 
+- **Cinematic landing** — the AgentOps question on `/`, with a real control-tower window
+  (launch-ready count, readiness mix, governance signals) computed from the synthetic fleet.
 - **Executive dashboard** — portfolio value, readiness mix, hours saved, and a prioritized
-  "needs attention" list.
+  "needs attention" list, now at `/demo`.
 - **Risk-aware registry** — every agent with owner, team, data-access level, autonomy, and
   readiness, with high-risk attributes flagged before you even open an agent.
 - **Agent detail** — purpose, data and tools, evaluation metrics, a readiness scorecard with
