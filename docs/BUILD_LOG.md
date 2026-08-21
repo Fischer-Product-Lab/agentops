@@ -13,6 +13,9 @@ environment context that isn't obvious from the source alone.
 - **Repo:** `Fischer-Product-Lab/agentops` (GitHub)
 - **Production branch:** `main` (Vercel auto-deploys on every push to `main`)
 - **V1 scope:** complete and deployed.
+- **Portfolio landing (2026-08):** `/` is the cinematic marketing surface.
+  The original executive dashboard lives at `/demo`. Registry and about URLs
+  are unchanged. The readiness engine and synthetic fleet were not rewritten.
 
 ---
 
@@ -75,7 +78,7 @@ was to relocate the whole project outside OneDrive (to `%USERPROFILE%\dev\agento
 | B | `lib/types.ts`, deterministic `lib/readiness.ts`, 8 synthetic agents, tests. |
 | C | `/registry` sortable, risk-aware table. |
 | D | `/registry/[id]` agent detail (score ring, rubric breakdown, eval gauges, audit log). |
-| E | `/` executive dashboard (KPIs, status donut, hours-by-team chart, attention list). |
+| E | `/demo` executive dashboard (KPIs, status donut, hours-by-team chart, attention list). Originally `/`; moved when the cinematic landing took `/`. |
 | F | README, `SECURITY.md`, STRIDE `docs/threat-model.md`, Dependabot, strict TS. |
 | G | Deploy to Vercel from GitHub (no env vars; production branch `main`). |
 

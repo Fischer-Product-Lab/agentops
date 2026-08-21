@@ -1,7 +1,18 @@
 import type { Metadata } from "next";
-import { Fraunces, Hanken_Grotesk } from "next/font/google";
+import { Fraunces, Geist, Geist_Mono, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
-import { AppShell } from "@/components/layout/app-shell";
+
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
+  display: "swap",
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+  display: "swap",
+});
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -18,7 +29,7 @@ const hankenGrotesk = Hanken_Grotesk({
 export const metadata: Metadata = {
   title: "AgentOps — AI Agent Governance Control Tower",
   description:
-    "Inventory, risk-score, and govern enterprise AI agents. A read-only, synthetic-data demo from Fischer Product Lab.",
+    "Oversee every agent's readiness, governance signals, operational value, and path to launch. A read-only, synthetic-data demo from Fischer Product Lab.",
 };
 
 export default function RootLayout({
@@ -29,11 +40,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${hankenGrotesk.variable} h-full`}
+      className={`${geist.variable} ${geistMono.variable} ${fraunces.variable} ${hankenGrotesk.variable} h-full`}
     >
-      <body className="min-h-dvh">
-        <AppShell>{children}</AppShell>
-      </body>
+      <body className="min-h-dvh">{children}</body>
     </html>
   );
 }

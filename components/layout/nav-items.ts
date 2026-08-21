@@ -9,6 +9,6 @@ export interface NavItem {
 }
 
 export const navItems: NavItem[] = [
-  { href: "/", label: "Dashboard", icon: LayoutDashboard, exact: true },
+  { href: "/demo", label: "Dashboard", icon: LayoutDashboard, exact: true },
   { href: "/registry", label: "Registry", icon: Boxes },
 ];
